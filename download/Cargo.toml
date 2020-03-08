@@ -1,0 +1,9 @@
+[package]
+name = "download"
+version = "0.0.0"
+authors = ["Ryo Yamashita <qryxip@gmail.com>"]
+edition = "2018"
+publish = false
+
+[dependencies]
+curl = "0.4.26"

@@ -1,0 +1,11 @@
+[package]
+name = "with-curl-sys-0-4-28"
+version = "0.0.0"
+authors = ["Ryo Yamashita <qryxip@gmail.com>"]
+edition = "2018"
+publish = false
+
+[dependencies]
+_ = { package = "curl-sys", version = "=0.4.28" }
+curl = "0.4.26"
+download = { path = "../download" }
