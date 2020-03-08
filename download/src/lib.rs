@@ -26,7 +26,7 @@ pub fn download() -> Result<(), curl::Error> {
     let time = Instant::now() - start;
     drop(transfer);
 
-    assert_eq!(len, 2_097_152);
+    assert_eq!(len, 4_073_722);
 
     println!("It took {:?}", time);
     Ok(())
