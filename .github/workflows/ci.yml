@@ -48,6 +48,7 @@ jobs:
       - name: Run
         run: |
           python -m http.server -d ./files &
+          sleep 8
           cargo run --manifest-path ./with-curl-sys-0-4-27/Cargo.toml
           cargo run --manifest-path ./with-curl-sys-0-4-28/Cargo.toml
         shell: bash
