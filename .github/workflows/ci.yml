@@ -21,11 +21,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Setup Python 3.8
-        uses: actions/setup-python@v1
-        with:
-          python-version: '3.8'
-
       - name: Setup `${{ matrix.toolchain }}`
         uses: actions-rs/toolchain@v1
         with:
@@ -33,23 +28,15 @@ jobs:
           default: true
           profile: default
 
-      - name: '`cargo build --manifest-path ./with-curl-sys-0-4-27/Cargo.toml -v`'
+      - name: '`cargo run --manifest-path ./with-curl-sys-0-4-27/Cargo.toml -v`'
         uses: actions-rs/cargo@v1
         with:
-          command: build
+          command: run
           args: --manifest-path ./with-curl-sys-0-4-27/Cargo.toml -v
 
-      - name: '`cargo build --manifest-path ./with-curl-sys-0-4-28/Cargo.toml -v`'
+      - name: '`cargo run --manifest-path ./with-curl-sys-0-4-28/Cargo.toml -v`'
         uses: actions-rs/cargo@v1
         with:
-          command: build
+          command: run
           args: --manifest-path ./with-curl-sys-0-4-28/Cargo.toml -v
-
-      - name: Run
-        run: |
-          python -m http.server -d ./files &
-          sleep 8
-          cargo run --manifest-path ./with-curl-sys-0-4-27/Cargo.toml
-          cargo run --manifest-path ./with-curl-sys-0-4-28/Cargo.toml
-        shell: bash
 
