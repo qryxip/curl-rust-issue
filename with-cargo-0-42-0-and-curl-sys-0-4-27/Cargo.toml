@@ -1,11 +1,12 @@
 [package]
-name = "with-curl-sys-0-4-28-http2-enabled"
+name = "with-cargo-0-42-0-and-curl-sys-0-4-27"
 version = "0.0.0"
 authors = ["Ryo Yamashita <qryxip@gmail.com>"]
 edition = "2018"
 publish = false
 
 [dependencies]
-_ = { package = "curl-sys", version = "=0.4.28", features = ["http2"] }
+_cargo = { package = "cargo", version = "=0.42.0" }
+_curl_sys = { package = "curl-sys", version = "=0.4.27" }
 curl = "0.4.26"
 download = { path = "../download" }

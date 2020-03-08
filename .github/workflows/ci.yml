@@ -28,15 +28,15 @@ jobs:
           default: true
           profile: default
 
-      - name: '`cargo run --manifest-path ./with-curl-sys-0-4-27-http2-enabled/Cargo.toml -v`'
+      - name: '`cargo run --manifest-path ./with-cargo-0-42-0-and-curl-sys-0-4-27/Cargo.toml -v`'
         uses: actions-rs/cargo@v1
         with:
           command: run
-          args: --manifest-path ./with-curl-sys-0-4-27-http2-enabled/Cargo.toml -v
+          args: --manifest-path ./with-cargo-0-42-0-and-curl-sys-0-4-27/Cargo.toml -v
 
-      - name: '`cargo run --manifest-path ./with-curl-sys-0-4-28-http2-enabled/Cargo.toml -v`'
+      - name: '`cargo run --manifest-path ./with-cargo-0-42-0-and-curl-sys-0-4-28/Cargo.toml -v`'
         uses: actions-rs/cargo@v1
         with:
           command: run
-          args: --manifest-path ./with-curl-sys-0-4-28-http2-enabled/Cargo.toml -v
+          args: --manifest-path ./with-cargo-0-42-0-and-curl-sys-0-4-28/Cargo.toml -v
 
